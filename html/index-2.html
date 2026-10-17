@@ -2,28 +2,12 @@
 <html lang="en" class="no-js">
 
 <head>
-    <script>document.documentElement.classList.remove('no-js');</script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description"
-    content="Elvaron is an independent creative studio building distinctive brands, digital experiences, and campaigns." />
-  <meta name="theme-color" content="#36ff5e" />
-  <title>Elvaron | Creative studio</title>
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
-  <link rel="preload" href="../node_modules/@fontsource-variable/bricolage-grotesque/files/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="../node_modules/@fontsource-variable/hanken-grotesk/files/hanken-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="/assets/loader.css" data-loader-styles />
-<link rel="preload" href="../node_modules/remixicon/fonts/remixicon.woff2" as="font" type="font/woff2" crossorigin />
-    <style data-offcanvas-startup>
-      #mainNav[hidden], #site-customizer[hidden] { display: none !important; }
-      html.no-js #mainNav[hidden] { display: flex !important; }
-      html:not(.no-js) #mainNav:not(.show):not(.showing):not(.hiding) {
-        visibility: hidden !important;
-        transform: translateX(100%) !important;
-        transition: none !important;
-      }
-    </style>
-  </head>
+  <include src="html/partials/head/head.html"
+    title="Creative Studio for Branding &amp; Digital Design | Elvaron"
+    description="Discover Elvaron, a creative studio bringing brand strategy, thoughtful design, and digital experiences together for businesses ready for their next chapter."
+    keywords="creative studio, brand strategy, digital design"
+    robots="index, follow"></include>
+</head>
 
 <body class="home-page home-page-reference home-page-alt">
     <include src="html/partials/components/loader.html"></include>
@@ -687,22 +671,7 @@
 
   </main>
   <include src="html/partials/footers/footer-3.html"></include>
-        <script data-loader-dismiss>
-      (() => {
-        const loader = document.getElementById('page-loader');
-        if (!loader) return;
-        const ready = window.elvaronStylesReady || new Promise(resolve => {
-          if (document.readyState === 'complete') resolve();
-          else window.addEventListener('load', resolve, { once: true });
-        });
-        ready.then(() => document.fonts ? document.fonts.ready : undefined).then(() => {
-          requestAnimationFrame(() => requestAnimationFrame(() => {
-            loader.classList.add('is-hidden');
-            setTimeout(() => loader.remove(), 180);
-          }));
-        });
-      })();
-    </script>
+        <script defer src="/assets/loader.js"></script>
 
   <script type="module" src="/src/js/main.js"></script>
 </body>

@@ -9,7 +9,9 @@ export function initPageContent() {
   const setTitle = title => {
     setText('.page-hero h1', title);
     setText('.breadcrumb-item.active', title);
-    document.title = `${title} â€” Elvaron`;
+    if (['service', 'project', 'article', 'member'].some(key => params.has(key))) {
+      document.title = `${title} | Elvaron`;
+    }
   };
   if (location.pathname.endsWith('/service-details.html')) {
     const service = services[index('service')] || services[0];
@@ -32,12 +34,28 @@ export function initPageContent() {
     setText('.prose h2', post[1]);
     setText('.prose .lead', post[3]);
   }
-  if (location.pathname.endsWith('/team-details.html')) {
-    const people = [['The Elvaron team','Product curator'],['Elvaron curator','Collection designer'],['Elvaron designer','Customer experience']];
+  if (document.querySelector('.team-profile-page')) {
+    const people = [
+      ['Jordan Ellis', 'Creative Director', 1, 'I connect ambitious ideas with a clear creative direction, helping brands find their voice and turn it into experiences people remember.'],
+      ['Maya Chen', 'Brand Strategist', 2, 'I help teams find the story at the heart of their brand, connecting audience understanding with a position that feels clear, relevant, and distinctive.'],
+      ['Samira Patel', 'Digital Designer', 5, 'I turn complex ideas into approachable digital experiences, balancing visual craft with the everyday needs of the people who use them.'],
+      ['Leo Martinez', 'Motion Designer', 6, 'I bring stories to life through movement, using rhythm, detail, and thoughtful transitions to give brands an expressive digital presence.'],
+      ['Avery Brooks', 'Growth Strategist', 3, 'I connect audience insight with practical experiments, helping teams identify opportunities and build a clearer path toward sustainable growth.'],
+      ['Nina Okafor', 'Content Lead', 4, 'I help brands communicate with clarity and personality, shaping useful content that connects a strong idea with the people it needs to reach.'],
+      ['Theo Bennett', 'Paid Media Specialist', 7, 'I bring a curious, considered approach to paid media, connecting creative ideas with audience insights and learning from every campaign.'],
+      ['Lena Fischer', 'Client Partnerships Lead', 8, 'I make collaboration feel clear and connected, bringing the right people together and keeping every conversation focused on what matters to the project.'],
+    ];
     const person = people[index('member')] || people[0];
-    setTitle(person[0]);
-    const eyebrow = document.querySelector('.page-hero .eyebrow');
-    if (eyebrow?.lastChild) eyebrow.lastChild.textContent = person[1].toUpperCase();
-    setText('.prose > p', `${person[0]} helps shape the Elvaron collection with attention to useful design, considered details, and everyday comfort.`);
+    document.querySelectorAll('[data-profile-name]').forEach(element => { element.textContent = person[0]; });
+    setText('[data-profile-role]', person[1]);
+    setText('[data-profile-bio]', person[3]);
+    const portrait = document.querySelector('[data-profile-image]');
+    portrait.src = new URL(`../../assets/images/team/${person[2]}.webp`, import.meta.url).href;
+    portrait.alt = person[0] + ', ' + person[1];
+    document.title = person[0] + ' - ' + person[1] + ' | Elvaron';
+    const description = 'Meet ' + person[0] + ', ' + person[1] + ' at Elvaron. Explore their perspective on creative work, thoughtful design, and collaborative projects.';
+    document.querySelector('meta[name="description"]')?.setAttribute('content', description);
+    document.querySelector('meta[property="og:title"]')?.setAttribute('content', document.title);
+    document.querySelector('meta[property="og:description"]')?.setAttribute('content', description);
   }
 }

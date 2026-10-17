@@ -82,3 +82,19 @@
 }
 .page-loader { animation: loader-failsafe 0s 8s forwards; }
 html.no-js .page-loader { display: none; }
+
+// Keep drawers hidden before the main stylesheet and scripts initialize.
+#mainNav[hidden],
+#site-customizer[hidden] {
+  display: none !important;
+}
+
+html.no-js #mainNav[hidden] {
+  display: flex !important;
+}
+
+html:not(.no-js) #mainNav:not(.show):not(.showing):not(.hiding) {
+  visibility: hidden !important;
+  transform: translateX(100%) !important;
+  transition: none !important;
+}

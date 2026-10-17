@@ -4,16 +4,20 @@ import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve, relative, isAbsolute } from 'node:path';
 import { fileURLToPath } from 'node:url';
 // Shared HTML includes are expanded here during development and production builds.
-const includePattern = /<include\s+src="([^"]+)"\s*>\s*<\/include>/g;
+const includePattern = /<include\s+src="([^"]+)"([^>]*)>\s*<\/include>/g;
 
 function expandPartials(html, root, stack = [], dependencies = new Set()) {
-  return html.replace(includePattern, (_, source) => {
+  return html.replace(includePattern, (_, source, attributes) => {
     const file = resolve(root, source);
     const path = relative(root, file);
     if (isAbsolute(path) || path.startsWith('..')) throw new Error(`Partial outside project: ${source}`);
     if (stack.includes(file)) throw new Error(`Circular HTML partial: ${source}`);
     dependencies.add(file);
-    const partial = readFileSync(file, 'utf8').replace(/^\uFEFF/, '');
+    const values = Object.fromEntries([...attributes.matchAll(/([\w-]+)="([^"]*)"/g)].map(([, key, value]) => [key, value]));
+    const partial = readFileSync(file, 'utf8').replace(/^\uFEFF/, '').replace(/{{\s*([\w-]+)\s*}}/g, (_, key) => {
+      if (!(key in values)) throw new Error('Missing include value: ' + key + ' in ' + source);
+      return values[key];
+    });
     return expandPartials(partial, root, [...stack, file], dependencies);
   });
 }
@@ -73,7 +77,7 @@ function sourceAssets() {
 
 
 // Remove unused vendor icon mappings while retaining every icon named in source.
-function usedIconStyles() {
+function usedIconStyles(enabled = true) {
   const collect = directory => readdirSync(directory, { withFileTypes: true }).flatMap(entry => {
     const file = resolve(directory, entry.name);
     if (entry.isDirectory()) return collect(file);
@@ -84,6 +88,7 @@ function usedIconStyles() {
   return {
     postcssPlugin: 'elvaron-used-icons',
     Rule(rule) {
+      if (!enabled) return;
       const icon = rule.selector.match(/^\.ri-([a-z0-9-]+)::?before$/);
       if (icon && !source.includes(icon[1])) rule.remove();
       // Bootstrap generates utility values at every breakpoint; retain the ones used in source.
@@ -182,7 +187,7 @@ function loaderStyles() {
   };
 }
 
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   root: htmlRoot,
   publicDir: resolve(root, 'public'),
   base: './',
@@ -197,10 +202,10 @@ export default defineConfig({
     },
   },
   css: {
-    postcss: { plugins: [usedIconStyles()] },
+    postcss: { plugins: [usedIconStyles(command === 'build')] },
     preprocessorOptions: {
       // Bootstrap 5 uses the legacy Sass import API. Keep local warnings visible.
       scss: { quietDeps: true, silenceDeprecations: ['import', 'global-builtin', 'color-functions', 'if-function'] },
     },
   },
-});
+}));

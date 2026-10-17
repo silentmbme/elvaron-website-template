@@ -1,30 +1,12 @@
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
-    <script>document.documentElement.classList.remove('no-js');</script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Notes from people who have made Elvaron part of their everyday."
-    />
-    <meta name="theme-color" content="#f7f7f2" />
-    <title>Kind words from our customers â€” Elvaron</title>
-    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
-    <link rel="preload" href="../node_modules/@fontsource-variable/bricolage-grotesque/files/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="../node_modules/@fontsource-variable/hanken-grotesk/files/hanken-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="/assets/loader.css" data-loader-styles />
-<link rel="preload" href="../node_modules/remixicon/fonts/remixicon.woff2" as="font" type="font/woff2" crossorigin />
-    <style data-offcanvas-startup>
-      #mainNav[hidden], #site-customizer[hidden] { display: none !important; }
-      html.no-js #mainNav[hidden] { display: flex !important; }
-      html:not(.no-js) #mainNav:not(.show):not(.showing):not(.hiding) {
-        visibility: hidden !important;
-        transform: translateX(100%) !important;
-        transition: none !important;
-      }
-    </style>
-  </head>
+  <include src="html/partials/head/head.html"
+    title="Client Testimonials &amp; Feedback | Elvaron"
+    description="Read client feedback about working with Elvaron. Discover perspectives on our creative process, collaboration, and approach to delivering thoughtful work."
+    keywords="client testimonials, customer feedback, Elvaron reviews"
+    robots="index, follow"></include>
+</head>
   <body class="about-page home-page">
     <include src="html/partials/components/loader.html"></include>
     <include src="html/partials/headers/default.html"></include>
@@ -238,22 +220,7 @@
       <include src="html/partials/components/marketing-cta.html"></include>
     </main>
     <include src="html/partials/footers/default.html"></include>
-        <script data-loader-dismiss>
-      (() => {
-        const loader = document.getElementById('page-loader');
-        if (!loader) return;
-        const ready = window.elvaronStylesReady || new Promise(resolve => {
-          if (document.readyState === 'complete') resolve();
-          else window.addEventListener('load', resolve, { once: true });
-        });
-        ready.then(() => document.fonts ? document.fonts.ready : undefined).then(() => {
-          requestAnimationFrame(() => requestAnimationFrame(() => {
-            loader.classList.add('is-hidden');
-            setTimeout(() => loader.remove(), 180);
-          }));
-        });
-      })();
-    </script>
+        <script defer src="/assets/loader.js"></script>
 
     <script type="module" src="/src/js/main.js"></script>
   </body>
