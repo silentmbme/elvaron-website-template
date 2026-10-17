@@ -1,0 +1,512 @@
+:root {
+  --sn-font-body: 'Hanken Grotesk', Arial, sans-serif;
+  --sn-font-heading: 'Bricolage Grotesque', Arial, sans-serif;
+  --sn-text-body: 17px;
+  --sn-text-title: 56px;
+  --sn-text-display: clamp(52px, 7.6vw, 118px);
+}
+body {
+  font-family: var(--sn-font-body);
+  font-size: 17px;
+  line-height: 1.65;
+}
+button,
+input,
+select,
+textarea {
+  font-family: var(--sn-font-body);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.price,
+.stats strong,
+.image-badge strong,
+.revenue-card strong,
+.footer-wordmark {
+  font-family: var(--sn-font-heading);
+}
+h1 {
+  font-weight: 750;
+  letter-spacing: -0.055em;
+}
+h2 {
+  font-size: var(--sn-text-title);
+  font-weight: 750;
+  line-height: 1.08;
+  letter-spacing: -0.055em;
+}
+h3 {
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: -0.055em;
+}
+p {
+  color: var(--sn-muted);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+.container {
+  max-width: 1240px;
+}
+.marketing-hero h1 {
+  font-size: var(--sn-text-display);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+}
+.marketing-hero h1 mark {
+  padding: 0 0.2em 0.035em;
+}
+.marketing-hero .hero-description {
+  font-size: 19px;
+  line-height: 1.65;
+}
+@media (min-width: 992px) {
+  .marketing-hero > .container > .row > .col-lg-7 {
+    width: 66.666667%;
+  }
+  .marketing-hero > .container > .row > .col-lg-5 {
+    width: 33.333333%;
+  }
+}
+.eyebrow,
+.marketing-hero .eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+.text-link {
+  font-size: 15px;
+  font-weight: 650;
+}
+.site-header {
+  .nav-link {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .dropdown-item {
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .navbar-brand {
+    font-family: var(--sn-font-heading);
+    font-size: 26px;
+    letter-spacing: 0.01em;
+  }
+}
+.section-heading > p {
+  font-size: 17px;
+  line-height: 1.65;
+  max-width: 380px;
+}
+.service-card {
+  h3 {
+    font-size: 24px;
+    font-weight: 650;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+  }
+  p {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+  .card-top span {
+    font-size: 13px;
+  }
+}
+.service-tags span {
+  font-size: 13px;
+  font-weight: 600;
+}
+.benefit-grid {
+  font-size: 16px;
+  font-weight: 600;
+}
+.stats {
+  strong {
+    font-size: 48px;
+    font-weight: 750;
+    letter-spacing: -0.03em;
+  }
+  small {
+    font-size: 14px;
+  }
+}
+.image-badge {
+  strong {
+    font-size: 48px;
+    font-weight: 750;
+  }
+  span {
+    font-size: 14px;
+    font-weight: 700;
+  }
+}
+.project-card {
+  h3 {
+    font-size: 26px;
+    line-height: 1.1;
+    font-weight: 650;
+    letter-spacing: -0.01em;
+  }
+  .eyebrow {
+    font-size: 13px;
+  }
+  > p:last-child {
+    font-size: 16px;
+  }
+}
+.pill {
+  font-size: 12px;
+}
+.process-card {
+  h3 {
+    font-size: 22px;
+    line-height: 1.1;
+    font-weight: 650;
+  }
+  p {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+  > div {
+    font-size: 13px;
+  }
+}
+.benefit-row {
+  h3 {
+    font-size: 19px;
+    font-weight: 650;
+    letter-spacing: 0;
+    line-height: 1.1;
+  }
+  p {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+}
+.quote-card {
+  blockquote {
+    font-family: var(--sn-font-heading);
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 1.45;
+    letter-spacing: -0.01em;
+  }
+  figcaption strong {
+    font-size: 16px;
+  }
+  figcaption small {
+    font-size: 14px;
+  }
+}
+.quote-top span {
+  font-size: 14px;
+}
+.avatar {
+  font-size: 13px;
+}
+.pricing-card {
+  h3 {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+  > p {
+    font-size: 16px;
+    min-height: 53px;
+  }
+  .price {
+    font-size: 48px;
+    font-weight: 750;
+    letter-spacing: -0.03em;
+    span {
+      font-family: var(--sn-font-body);
+      font-size: 15px;
+    }
+  }
+  .check-list {
+    min-height: 210px;
+    li {
+      font-size: 17px;
+      font-weight: 600;
+    }
+  }
+}
+.blog-card {
+  h3 {
+    font-size: 24px;
+    line-height: 1.1;
+    font-weight: 650;
+  }
+  p {
+    font-size: 16px;
+  }
+  .post-meta {
+    font-size: 14px;
+  }
+}
+.cta-panel {
+  h2 {
+    font-size: clamp(40px, 5.4vw, 76px);
+    font-weight: 750;
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+  }
+  p {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+}
+.accordion-button {
+  font-family: var(--sn-font-heading);
+  font-size: 19px;
+  font-weight: 650;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+.accordion-body {
+  font-size: 16px;
+  line-height: 1.65;
+}
+.partner-strip .eyebrow {
+  font-size: 14px;
+}
+.partner-logos {
+  font-size: 24px;
+}
+.hero-mini-stats {
+  b {
+    font-family: var(--sn-font-heading);
+    font-size: 26px;
+  }
+  small {
+    font-size: 15px;
+    font-weight: 600;
+  }
+}
+.revenue-card {
+  strong {
+    font-size: 56px;
+  }
+  > div {
+    font-size: 13px;
+  }
+  .pill {
+    font-size: 11px;
+  }
+}
+.chart-label {
+  font-size: 11px;
+}
+.floating-chip {
+  font-size: 13px;
+}
+.photo-caption {
+  font-size: 14px;
+}
+.growth-art > .demo-note {
+  font-size: 11px;
+}
+.page-hero {
+  h1 {
+    font-size: clamp(52px, 7.6vw, 100px);
+    font-weight: 750;
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+  .breadcrumb {
+    font-size: 14px;
+  }
+  > .container > p:last-child {
+    font-size: 19px;
+  }
+}
+.prose {
+  h2 {
+    font-size: var(--sn-text-title);
+  }
+  h3 {
+    font-size: 26px;
+  }
+  p {
+    font-size: 17px;
+  }
+  .lead {
+    font-size: 20px;
+  }
+}
+.article-sidebar {
+  h3 {
+    font-size: 24px;
+  }
+  a {
+    font-size: 16px;
+  }
+}
+.detail-sidebar {
+  h3 {
+    font-size: 24px;
+  }
+  dt {
+    font-size: 14px;
+  }
+  dd,
+  > a {
+    font-size: 16px;
+  }
+}
+.team-card {
+  h3 {
+    font-size: 26px;
+  }
+  p {
+    font-size: 16px;
+  }
+}
+.form-label {
+  font-size: 16px;
+}
+.form-check-label,
+.form-status,
+.form-text {
+  font-size: 14px;
+}
+.form-control,
+.form-select {
+  font-size: 16px;
+}
+.contact-details h3 {
+  font-size: 22px;
+}
+.site-footer {
+  .navbar-brand {
+    font-family: var(--sn-font-heading);
+    font-size: 28px;
+  }
+  h3 {
+    font-size: 17px;
+    font-weight: 700;
+  }
+  p {
+    font-size: 16px;
+  }
+  .row > div > a:not(.navbar-brand) {
+    font-size: 15px;
+  }
+  small {
+    font-size: 12px;
+  }
+  .input-group input {
+    font-size: 15px;
+  }
+  .footer-bottom {
+    font-size: 14px;
+  }
+}
+.demo-note {
+  font-size: 12px;
+}
+@media (max-width: 1199.98px) {
+  :root {
+    --sn-text-title: 44px;
+  }
+  .section-heading {
+    flex-wrap: wrap;
+  }
+  .site-header .nav-link {
+    font-size: 14px;
+  }
+  .site-header .navbar-nav {
+    gap: 12px;
+  }
+}
+@media (max-width: 991.98px) {
+  :root {
+    --sn-text-title: 38px;
+  }
+  .marketing-hero > .container > .row > .col-lg-7,
+  .marketing-hero > .container > .row > .col-lg-5 {
+    width: 100%;
+  }
+  .site-header .offcanvas-body .nav-link {
+    font-size: 18px;
+  }
+  .hero-mini-stats {
+    b {
+      font-size: 24px;
+    }
+  }
+}
+@media (max-width: 767.98px) {
+  :root {
+    --sn-text-title: 32px;
+  }
+  .container {
+    padding-inline: 12px;
+  }
+  .row.g-5 {
+    --bs-gutter-x: 24px;
+  }
+  .marketing-hero h1 {
+    font-size: 52px;
+  }
+  .marketing-hero .eyebrow {
+    font-size: 11px;
+  }
+  .project-card h3 {
+    font-size: 22px;
+  }
+  .quote-card blockquote {
+    font-size: 18px;
+  }
+  .accordion-button {
+    font-size: 16px;
+  }
+  .cta-panel h2 {
+    font-size: 40px;
+  }
+  .page-hero h1 {
+    font-size: 44px;
+    overflow-wrap: break-word;
+  }
+  .benefit-grid {
+    font-size: 14px;
+  }
+  .hero-mini-stats small {
+    font-size: 13px;
+  }
+  .pricing-card > p {
+    min-height: 0;
+  }
+  .pricing-card .check-list {
+    min-height: 0;
+  }
+  .site-footer .footer-bottom {
+    font-size: 12px;
+  }
+}
+
+[data-theme="dark"]{
+  .btn.btn-dark{
+    background-color: #fff;
+    color: #000;
+  }
+  .bg-light {
+    background-color: rgba(255,255,255,0.1) !important;
+  }
+  .accordion-button:not(.collapsed) {
+    color: #fff;
+  }
+  .btn.btn-outline-dark{
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+}
+
+.btn.btn-primary{
+  background: var(--sn-primary-gradient);
+}

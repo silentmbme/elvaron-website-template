@@ -1,0 +1,57 @@
+// Elvaron design tokens shared by every page.
+:root {
+  --sn-primary: #35fe5d;
+  --sn-primary-01: color-mix(in srgb, var(--sn-primary) 30%, transparent);
+  --sn-primary-02: color-mix(in srgb, var(--sn-primary) 50%, transparent);
+  --sn-primary-gradient-start: var(--sn-primary);
+  --sn-primary-gradient-end: var(--sn-primary);
+  --sn-primary-gradient: var(--sn-primary);
+  --sn-primary-hover: color-mix(in srgb, var(--sn-primary) 82%, #000 18%);
+  --sn-secondary: color-mix(in srgb, var(--sn-primary-gradient-end) 72%, #111 28%);
+  --sn-accent: var(--sn-primary);
+  --sn-paper: #f7f7f2;
+  --sn-surface: #fff;
+  --sn-ink: #171719;
+  --sn-muted: #656560;
+  --sn-line: #e7e7e1;
+  --sn-tint: #d6ffe0;
+  --sn-section-space: 105px;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --sn-paper: #101411;
+  --sn-surface: #191f1a;
+  --sn-ink: #f0f3ee;
+  --sn-muted: #b0bbb1;
+  --sn-line: #343d35;
+  --sn-tint: #242d25;
+  --sn-secondary: color-mix(in srgb, var(--sn-primary-gradient-end) 65%, #fff 35%);
+  --bs-body-bg: #101411;
+  --bs-body-color: #f0f3ee;
+  --bs-secondary-color: #b0bbb1;
+  --bs-border-color: #343d35;
+}
+
+html[data-theme='dark'] body.theme-dark {
+  background: var(--sn-paper);
+  color: var(--sn-ink);
+}
+
+
+// Bootstrap Sass overrides. Keep these before Bootstrap is imported.
+$primary: #35fe5d;
+$secondary: #168a35;
+$dark: #171719;
+$light: #f7f7f2;
+$body-color: $dark;
+$body-bg: $light;
+$font-family-sans-serif: 'Hanken Grotesk', 'Arial', sans-serif;
+$border-radius: 0.5rem;
+$border-color: #e7e7e1;
+$accordion-bg: transparent;
+$accordion-button-active-bg: transparent;
+$accordion-button-active-color: $dark;
+$accordion-border-color: $border-color;
+$offcanvas-bg-color: $light;
+

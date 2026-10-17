@@ -1,0 +1,51 @@
+// Opt-in foundation utilities for future pages; existing layouts retain their sizes.
+.sn-display {
+  font-size: var(--sn-text-display);
+  line-height: 1.05;
+  letter-spacing: -0.065em;
+}
+.sn-text-small {
+  font-size: var(--sn-text-small);
+}
+.sn-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sn-space-3);
+}
+.sn-cluster {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sn-space-2);
+}
+.sn-surface {
+  color: var(--sn-ink);
+  background: var(--sn-paper);
+  border: 1px solid var(--sn-line);
+  border-radius: var(--sn-radius);
+}
+.sn-shadow {
+  box-shadow: var(--sn-shadow);
+}
+.sn-gradient-bg {
+  background: linear-gradient(135deg, var(--sn-primary), var(--sn-secondary));
+  color: #fff;
+}
+.sn-grid-bg {
+  background-image:
+    linear-gradient(var(--sn-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--sn-line) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+.sn-section-compact {
+  padding-block: clamp(2.5rem, 5vw, 5rem);
+}
+.sn-section-wide {
+  padding-block: clamp(4rem, 8vw, 8rem);
+}
+@media (max-width: 767.98px) {
+  :root {
+    --sn-space-5: 2rem;
+    --sn-space-6: 3rem;
+  }
+}

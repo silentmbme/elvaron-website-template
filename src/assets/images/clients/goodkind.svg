@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 64" fill="none">
+  <path d="M32 9c13 10 18 20 18 28 0 8-7 15-16 15S17 45 17 36c0-8 5-18 15-27Z" stroke="#172019" stroke-width="2.5"/>
+  <path d="M22 39c8-1 14-8 19-17M24 33l8 2m-5-9 8 2" stroke="#a5e845" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="66" y="39" fill="#172019" font-family="Arial,sans-serif" font-size="29" font-weight="700" letter-spacing="-1.5">goodkind</text>
+</svg>

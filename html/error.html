@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <script>document.documentElement.classList.remove('no-js');</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="We couldn't find that page. Find your way back to the Elvaron collection."
+    />
+    <meta name="theme-color" content="#f7f7f2" />
+    <title>Page not found - Elvaron</title>
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="../node_modules/@fontsource-variable/bricolage-grotesque/files/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../node_modules/@fontsource-variable/hanken-grotesk/files/hanken-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/assets/loader.css" data-loader-styles />
+<link rel="preload" href="../node_modules/remixicon/fonts/remixicon.woff2" as="font" type="font/woff2" crossorigin />
+    <style data-offcanvas-startup>
+      #mainNav[hidden], #site-customizer[hidden] { display: none !important; }
+      html.no-js #mainNav[hidden] { display: flex !important; }
+      html:not(.no-js) #mainNav:not(.show):not(.showing):not(.hiding) {
+        visibility: hidden !important;
+        transform: translateX(100%) !important;
+        transition: none !important;
+      }
+    </style>
+  </head>
+  <body class="error-route about-page home-page">
+    <include src="html/partials/components/loader.html"></include>
+    <include src="html/partials/headers/default.html"></include>
+    <include src="html/partials/customizer/customizer.html"></include>
+    <main id="main">
+      <section class="error-simple">
+        <div class="container">
+          <p class="eyebrow"><span class="status-dot"></span>ERROR 404</p>
+          <svg class="error-404-illustration" viewBox="0 0 480 200" role="img" aria-label="404">
+            <defs>
+              <linearGradient
+                id="errorNumberFill"
+                x1="70"
+                y1="30"
+                x2="390"
+                y2="175"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="var(--sn-primary)" />
+                <stop offset="1" stop-color="var(--sn-secondary)" />
+              </linearGradient>
+            </defs>
+            <path
+              d="M29 155c53 0 41-91 99-91 31 0 33 24 59 24s31-34 62-34 43 39 68 39 38-28 69-28"
+              stroke="var(--sn-secondary)"
+              stroke-opacity=".22"
+              stroke-width="2"
+              stroke-dasharray="4 8"
+              fill="none"
+            />
+            <text
+              x="240"
+              y="154"
+              text-anchor="middle"
+              fill="url(#errorNumberFill)"
+              stroke="var(--sn-ink)"
+              stroke-width="2"
+              paint-order="stroke"
+              font-family="Bricolage Grotesque, sans-serif"
+              font-size="164"
+              font-weight="800"
+              letter-spacing="-12"
+            >
+              404
+            </text>
+            <circle cx="29" cy="155" r="6" fill="var(--sn-ink)" />
+            <circle
+              cx="387"
+              cy="65"
+              r="7"
+              fill="var(--sn-surface)"
+              stroke="var(--sn-ink)"
+              stroke-width="2"
+            />
+            <path
+              d="m428 35 3 8 8 3-8 3-3 8-3-8-8-3 8-3 3-8Z"
+              fill="var(--sn-primary)"
+              stroke="var(--sn-ink)"
+              stroke-width="1.5"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <h1>Page not found</h1>
+          <p class="error-simple-message">
+            The page you’re looking for may have moved or no longer exists.
+          </p>
+          <div class="error-simple-actions">
+            <a href="/index.html" class="btn btn-primary"
+              >Back to home <i class="ri-arrow-right-up-line" aria-hidden="true"></i
+            ></a>
+            <a href="/services.html" class="btn btn-dark"
+              >Explore services <i class="ri-arrow-right-line" aria-hidden="true"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <include src="html/partials/footers/default.html"></include>
+        <script data-loader-dismiss>
+      (() => {
+        const loader = document.getElementById('page-loader');
+        if (!loader) return;
+        const ready = window.elvaronStylesReady || new Promise(resolve => {
+          if (document.readyState === 'complete') resolve();
+          else window.addEventListener('load', resolve, { once: true });
+        });
+        ready.then(() => document.fonts ? document.fonts.ready : undefined).then(() => {
+          requestAnimationFrame(() => requestAnimationFrame(() => {
+            loader.classList.add('is-hidden');
+            setTimeout(() => loader.remove(), 180);
+          }));
+        });
+      })();
+    </script>
+
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A practical getting-started and customization guide for the Elvaron HTML website template."
+    />
+    <title>Customer Guide — Elvaron HTML Template</title>
+    <link rel="icon" href="../public/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="CUSTOMER-GUIDE.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <span class="breadcrumb-label">ELVARON <span aria-hidden="true">/</span> CUSTOMER GUIDE</span>
+      <div>
+        <button
+          class="guide-menu-toggle"
+          type="button"
+          aria-controls="guideSidebar"
+          aria-expanded="false"
+          aria-label="Open guide navigation"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <a class="topbar-link" href="../README.md">Preview <span aria-hidden="true">↗</span></a>
+        <a class="topbar-link support-btn" href="#support"
+          >Support <span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </header>
+    <button
+      class="guide-menu-backdrop"
+      type="button"
+      aria-label="Close guide navigation"
+      tabindex="-1"
+    ></button>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="page-title">
+        <div class="hero-content">
+          <p class="eyebrow"><span></span> CUSTOMER DOCUMENTATION</p>
+          <h1 id="page-title">Make the template<br /><em>your own.</em></h1>
+          <p class="hero-copy">
+            A practical guide to setup, customization, content, and publishing. Choose a topic from
+            the sidebar to jump straight to what you need.
+          </p>
+        </div>
+        <div class="hero-meta">
+          <span>08 TOPICS</span><span>·</span><span>ABOUT 12 MIN READ</span>
+        </div>
+      </section>
+
+      <div class="guide-wrap">
+        <aside class="guide-rail" id="guideSidebar" aria-label="Guide contents">
+          <button class="guide-menu-close" type="button" aria-label="Close guide navigation">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m6 6 12 12M18 6 6 18" />
+            </svg>
+          </button>
+          <a class="brand" href="#top" aria-label="Elvaron customer guide home">
+            <span class="brand-icon">
+              <svg class="brand-mark" viewBox="0 0 124 117" aria-hidden="true">
+                <path d="M0 0h72v19L0 39zM0 40h72v19L0 79zM0 80h124v37H0z" fill="currentColor" />
+              </svg>
+            </span>
+            <span>Elvaron <small>Customer guide</small></span>
+          </a>
+          <p class="rail-label">IN THIS GUIDE</p>
+          <nav>
+            <a href="#getting-started" aria-current="location">
+              <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z" />
+                <path d="M4 6h13M8 9h8M8 12h6" />
+              </svg>
+              <span>Getting started</span>
+            </a>
+            <a href="#project-map">
+              <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M3 6.5A1.5 1.5 0 0 1 4.5 5H10l2 2h7.5A1.5 1.5 0 0 1 21 8.5v9a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5z"
+                />
+                <path d="M3 9h18" />
+              </svg>
+              <span>Project map</span>
+            </a>
+            <a href="#make-it-yours">
+              <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 3a9 9 0 1 0 0 18h1.4a1.8 1.8 0 0 0 1.3-3.1 1.6 1.6 0 0 1 1.1-2.8H18a3 3 0 0 0 3-3A9 9 0 0 0 12 3Z"
+                />
+                <path d="M7.5 10h.01M10 7.5h.01M14 7.5h.01M16.5 10h.01" />
+              </svg>
+              <span>Make it yours</span>
+            </a>
+            <a href="#pages-content">
+              <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6 3.5h8l4 4V20H6z" />
+                <path d="M14 3.5V8h4M9 12h6M9 15h6" />
+              </svg>
+              <span>Pages &amp; content</span>
+            </a>
+            <a href="#forms">
+              <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3.5" y="5" width="17" height="14" rx="2" />
+                <path d="m5 7 7 5 7-5" />
+              </svg>
+              <span>Forms &amp; integrations</span>
+            </a>
+            <a href="#launch">
+              <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m5 12.5 4.5 4.5L19 7.5" />
+                <circle cx="12" cy="12" r="9" />
+              </svg>
+              <span>Before you launch</span>
+            </a>
+            <a href="#troubleshooting">
+              <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M14.5 6.5a4 4 0 0 0-5.2 5.2L4 17a2.1 2.1 0 0 0 3 3l5.3-5.3a4 4 0 0 0 5.2-5.2l-2.3 2.3-3-3z"
+                />
+              </svg>
+              <span>Fix common issues</span>
+            </a>
+            <a href="#support">
+              <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 13v-1a8 8 0 0 1 16 0v1" />
+                <rect x="3" y="12" width="4" height="7" rx="2" />
+                <rect x="17" y="12" width="4" height="7" rx="2" />
+                <path d="M17 19a5 5 0 0 1-5 3h-1" />
+              </svg>
+              <span>Contact support</span>
+            </a>
+          </nav>
+          <div class="rail-help support-card">
+            <span class="help-dot"></span>
+            <strong>Need a hand?</strong>
+            <p>Our support team can help with your template questions.</p>
+            <a class="support-link" href="mailto:support@sramatech.com"
+              >Email support <span aria-hidden="true">↗</span></a
+            >
+          </div>
+        </aside>
+
+        <article class="guide-content">
+          <section class="guide-section" id="getting-started">
+            <div class="section-heading">
+              <span class="section-number">01</span>
+              <div>
+                <p class="eyebrow">FIRST THINGS FIRST</p>
+                <h2>Getting started</h2>
+              </div>
+            </div>
+            <p class="section-intro">
+              Elvaron is a static HTML template built with Vite, Bootstrap 5, SCSS, and JavaScript.
+              You can preview and edit it locally before publishing it to your hosting provider.
+            </p>
+            <ol class="setup-steps">
+              <li>
+                <span>1</span>
+                <div>
+                  <strong>Install Node.js</strong>
+                  <p>
+                    Use a current LTS release from
+                    <a href="https://nodejs.org/" target="_blank">nodejs.org</a>.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span>2</span>
+                <div>
+                  <strong>Open the project folder</strong>
+                  <p>
+                    Open the folder containing <code>package.json</code> in your terminal or code
+                    editor.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span>3</span>
+                <div>
+                  <strong>Install project packages</strong>
+                  <div class="command-card">
+                    <div class="command-card-header">
+                      <span>TERMINAL</span>
+                      <button
+                        class="copy-button"
+                        type="button"
+                        data-copy-code
+                        aria-label="Copy npm install command"
+                      >
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <rect x="8" y="8" width="12" height="12" rx="2" />
+                          <path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3" />
+                        </svg>
+                        <span>Copy</span>
+                      </button>
+                    </div>
+                    <pre><code>npm install</code></pre>
+                  </div>
+                  <p>
+                    On Windows PowerShell, use <code>npm.cmd install</code> if script execution
+                    blocks <code>npm</code>.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span>4</span>
+                <div>
+                  <strong>Start the local preview</strong>
+                  <div class="command-card">
+                    <div class="command-card-header">
+                      <span>TERMINAL</span>
+                      <button
+                        class="copy-button"
+                        type="button"
+                        data-copy-code
+                        aria-label="Copy npm run dev command"
+                      >
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <rect x="8" y="8" width="12" height="12" rx="2" />
+                          <path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3" />
+                        </svg>
+                        <span>Copy</span>
+                      </button>
+                    </div>
+                    <pre><code>npm run dev</code></pre>
+                  </div>
+                  <p>
+                    Open the local address printed in the terminal. Keep the terminal running while
+                    you work.
+                  </p>
+                </div>
+              </li>
+            </ol>
+            <div class="callout">
+              <span aria-hidden="true">↗</span>
+              <p>
+                <strong>For a production preview:</strong> run <code>npm run build</code>, then
+                <code>npm run preview</code>. The finished website is written to <code>dist/</code>.
+              </p>
+            </div>
+          </section>
+
+          <section class="guide-section" id="project-map">
+            <div class="section-heading">
+              <span class="section-number">02</span>
+              <div>
+                <p class="eyebrow">KNOW YOUR WAY AROUND</p>
+                <h2>Project map</h2>
+              </div>
+            </div>
+            <p class="section-intro">
+              Most edits belong in one of these places. Keep shared pieces in their partials so the
+              same update reaches every page.
+            </p>
+            <div class="file-list" role="list">
+              <div role="listitem">
+                <code>html/</code><span>Page content and page structure</span>
+              </div>
+              <div role="listitem">
+                <code>html/partials/</code><span>Shared headers, footers, and components</span>
+              </div>
+              <div role="listitem">
+                <code>src/scss/</code><span>Colors, typography, layout, and component styling</span>
+              </div>
+              <div role="listitem">
+                <code>src/js/</code
+                ><span>Navigation, forms, theme controls, and page behavior</span>
+              </div>
+              <div role="listitem">
+                <code>public/</code><span>Fonts, icons, and static files copied to the build</span>
+              </div>
+              <div role="listitem">
+                <code>dist/</code><span>Generated site files ready for hosting</span>
+              </div>
+            </div>
+            <p class="small-note">
+              The site pages are discovered from <code>html/</code> automatically. Shared partials
+              live in <code>html/partials/</code> and are expanded during the Vite build.
+            </p>
+          </section>
+
+          <section class="guide-section" id="make-it-yours">
+            <div class="section-heading">
+              <span class="section-number">03</span>
+              <div>
+                <p class="eyebrow">YOUR BRAND, YOUR DETAILS</p>
+                <h2>Make it yours</h2>
+              </div>
+            </div>
+            <div class="tip-grid">
+              <div class="tip-card">
+                <span class="tip-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M12 3a9 9 0 1 0 0 18h1.4a1.8 1.8 0 0 0 1.3-3.1 1.6 1.6 0 0 1 1.1-2.8H18a3 3 0 0 0 3-3A9 9 0 0 0 12 3Z"
+                    />
+                    <path d="M7.5 10h.01M10 7.5h.01M14 7.5h.01M16.5 10h.01" />
+                  </svg>
+                </span>
+                <h3>Choose your colors</h3>
+                <p>
+                  Use the on-page customizer to preview solid or gradient primary colors, light or
+                  dark appearance, and layout direction. The customizer saves your preview in this
+                  browser.
+                </p>
+              </div>
+              <div class="tip-card">
+                <span class="tip-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M4 19 9 5l5 14M6 14h6M14 19l3.5-10 3.5 10M15.5 16h4" />
+                  </svg>
+                </span>
+                <h3>Keep type consistent</h3>
+                <p>
+                  The visual system uses Bricolage Grotesque for headings and Hanken Grotesk for
+                  body text. Update the shared typography styles when changing font families or
+                  scale.
+                </p>
+              </div>
+              <div class="tip-card">
+                <span class="tip-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 3.5 14.4 9l6.1.5-4.6 4 1.4 6-5.3-3.2-5.3 3.2 1.4-6-4.6-4L9.6 9z" />
+                  </svg>
+                </span>
+                <h3>Replace the identity</h3>
+                <p>
+                  Update the Elvaron name, logo mark, favicon, page titles, social links, and
+                  contact details wherever they appear in shared and page-specific content.
+                </p>
+              </div>
+              <div class="tip-card">
+                <span class="tip-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="3" y="4" width="18" height="16" rx="2" />
+                    <circle cx="8.5" cy="9" r="1.5" />
+                    <path d="m4 17 5-5 3.5 3.5 2.5-2.5 5 5" />
+                  </svg>
+                </span>
+                <h3>Use your own images</h3>
+                <p>
+                  Place optimized images in <code>src/assets/images/</code>, use descriptive alt
+                  text, and keep image dimensions close to the displayed aspect ratio.
+                </p>
+              </div>
+            </div>
+            <div class="callout">
+              <span aria-hidden="true">i</span>
+              <p>
+                <strong>Preview versus permanent settings:</strong> The customizer saves choices in
+                your current browser so you can preview them. To set the default for every visitor,
+                update the <code>DEFAULTS</code> and palette values in
+                <code>src/js/components/theme-toggle.js</code>. The Reset button restores those
+                defaults.
+              </p>
+            </div>
+            <div class="callout">
+              <span aria-hidden="true">Aa</span>
+              <p>
+                <strong>Typography and identity:</strong> Update font families and responsive sizes
+                in <code>src/scss/base/_typography.scss</code>. Update the logo in
+                <code>html/partials/headers/</code> and the favicon at
+                <code>public/assets/favicon.svg</code>. See
+                <a href="TYPOGRAPHY.md">Typography customization</a> for the full type scale.
+              </p>
+            </div>
+            <p class="small-note">
+              The logo and contact details appear in shared header and footer partials. Change those
+              shared files once instead of editing every page separately.
+            </p>
+          </section>
+
+          <section class="guide-section" id="pages-content">
+            <div class="section-heading">
+              <span class="section-number">04</span>
+              <div>
+                <p class="eyebrow">MAKE EVERY PAGE YOURS</p>
+                <h2>Pages &amp; content</h2>
+              </div>
+            </div>
+            <p class="section-intro">
+              Choose the file by the kind of change you want to make. Page-specific content lives in
+              <code>html/</code>; shared elements live in <code>html/partials/</code> and update
+              everywhere that includes them.
+            </p>
+            <div class="page-guide-list">
+              <article class="page-guide-row">
+                <span class="page-guide-icon" aria-hidden="true"
+                  ><svg viewBox="0 0 24 24">
+                    <path d="M5 4h14v16H5z" />
+                    <path d="M8 8h8M8 12h8M8 16h5" /></svg
+                ></span>
+                <span class="page-guide-label">PAGE COPY</span>
+                <h3>Edit one page</h3>
+                <p>Open the matching HTML file to change its text, links, and page description.</p>
+                <span class="page-guide-paths">
+                  <code class="page-guide-path">html/about.html</code>
+                  <code class="page-guide-path">html/contact.html</code>
+                </span>
+              </article>
+              <article class="page-guide-row">
+                <span class="page-guide-icon" aria-hidden="true"
+                  ><svg viewBox="0 0 24 24">
+                    <path d="M3 5h18v5H3zM3 14h18v5H3z" />
+                    <path d="M7 7.5h.01M7 16.5h.01M11 7.5h6M11 16.5h6" /></svg
+                ></span>
+                <span class="page-guide-label">SHARED ELEMENTS</span>
+                <h3>Update header or footer</h3>
+                <p>Change a shared partial once to update every page that uses it.</p>
+                <span class="page-guide-paths">
+                  <code class="page-guide-path">html/partials/headers/</code>
+                  <code class="page-guide-path">html/partials/footers/</code>
+                </span>
+              </article>
+              <article class="page-guide-row">
+                <span class="page-guide-icon" aria-hidden="true"
+                  ><svg viewBox="0 0 24 24">
+                    <path d="M4 5h16v14H4z" />
+                    <circle cx="9" cy="10" r="2" />
+                    <path d="m5 17 5-5 3 3 2-2 4 4" /></svg
+                ></span>
+                <span class="page-guide-label">IMAGES &amp; BRAND</span>
+                <h3>Replace photos or logo</h3>
+                <p>
+                  Add optimized images, update the alt text, then check the crop on mobile and
+                  desktop.
+                </p>
+                <span class="page-guide-paths">
+                  <code class="page-guide-path">src/assets/images/</code>
+                  <code class="page-guide-path">public/assets/favicon.svg</code>
+                </span>
+              </article>
+              <article class="page-guide-row">
+                <span class="page-guide-icon" aria-hidden="true"
+                  ><svg viewBox="0 0 24 24">
+                    <path d="M4 6h16M4 12h10M4 18h7" />
+                    <circle cx="18" cy="16" r="3" />
+                    <path d="m20.2 18.2 1.8 1.8" /></svg
+                ></span>
+                <span class="page-guide-label">NAVIGATION</span>
+                <h3>Keep links current</h3>
+                <p>
+                  Use existing <code>.html</code> pages or real section anchors. Remove links for
+                  pages you will not publish.
+                </p>
+                <span class="page-guide-paths">
+                  <code class="page-guide-path">html/partials/headers/</code>
+                </span>
+              </article>
+              <article class="page-guide-row">
+                <span class="page-guide-icon" aria-hidden="true"
+                  ><svg viewBox="0 0 24 24">
+                    <path d="M12 5v14M5 12h14" />
+                    <rect x="3" y="3" width="18" height="18" rx="3" /></svg
+                ></span>
+                <span class="page-guide-label">NEW PAGES</span>
+                <h3>Add a page</h3>
+                <p>
+                  Create an HTML file inside <code>html/</code>. Vite discovers page files there
+                  when it builds the site.
+                </p>
+                <span class="page-guide-paths">
+                  <code class="page-guide-path">html/new-page.html</code>
+                </span>
+              </article>
+              <article class="page-guide-row">
+                <span class="page-guide-icon" aria-hidden="true"
+                  ><svg viewBox="0 0 24 24">
+                    <path d="M4 5h16v14H4z" />
+                    <path d="m8 9 2 2-2 2M12 15h4" /></svg
+                ></span>
+                <span class="page-guide-label">SHARED HTML INCLUDES</span>
+                <h3>Edit shared sections</h3>
+                <p>
+                  The generator can overwrite generated page HTML. Update the generator too if you
+                  plan to run it again.
+                </p>
+                <span class="page-guide-paths">
+                  <code class="page-guide-path">html/partials/</code>
+                </span>
+              </article>
+            </div>
+            <div class="callout page-content-note">
+              <span aria-hidden="true">i</span>
+              <p>
+                <strong>Simple workflow:</strong> Make one change, save the file, and check the
+                local preview. Repeat at phone and desktop widths before moving to the next page.
+              </p>
+            </div>
+          </section>
+
+          <section class="guide-section" id="forms">
+            <div class="section-heading">
+              <span class="section-number">05</span>
+              <div>
+                <p class="eyebrow">CONNECT YOUR SERVICES</p>
+                <h2>Forms &amp; integrations</h2>
+              </div>
+            </div>
+            <p class="section-intro">
+              Forms currently provide front-end validation and demo feedback. They do not send or
+              store submissions.
+            </p>
+            <div class="integration-card">
+              <div>
+                <h3>
+                  <svg class="integration-heading-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 5.5h16v12H9l-5 3v-15Z" />
+                    <path d="M8 10h8M8 14h5" />
+                  </svg>
+                  Before accepting real inquiries
+                </h3>
+                <p>
+                  Connect the contact and newsletter forms to your chosen backend, CRM, or email
+                  platform. Test successful and failed submissions, update the privacy notice, and
+                  verify where messages are delivered.
+                </p>
+              </div>
+            </div>
+            <ul class="clean-list integration-steps">
+              <li>
+                <strong>Choose where messages go.</strong> Select your form provider, CRM, or server
+                endpoint.
+              </li>
+              <li>
+                <strong>Connect each form.</strong> Update its action or wire it to your provider's
+                API using the provider's instructions.
+              </li>
+              <li>
+                <strong>Test the full journey.</strong> Send a test message, confirm delivery, and
+                check the success and error states on mobile.
+              </li>
+              <li>
+                <strong>Protect customer data.</strong> Publish an accurate privacy policy and
+                collect only the information you need.
+              </li>
+            </ul>
+          </section>
+
+          <section class="guide-section" id="launch">
+            <div class="section-heading">
+              <span class="section-number">06</span>
+              <div>
+                <p class="eyebrow">READY WHEN YOU ARE</p>
+                <h2>Before you launch</h2>
+              </div>
+            </div>
+            <ul class="launch-list">
+              <li>
+                <span aria-hidden="true">✓</span> Replace all sample copy, demo profiles, metrics,
+                pricing, and contact information.
+              </li>
+              <li>
+                <span aria-hidden="true">✓</span> Connect and test forms, analytics, consent, and
+                any external services you use.
+              </li>
+              <li>
+                    <span aria-hidden="true">✓</span> Review the site at phone, tablet, and desktop
+                sizes; check keyboard focus and dark mode.
+              </li>
+              <li>
+                 
+                <span aria-hidden="true">✓</span> 
+                 <div class="build-class"> Run <code>npm run build</code> and upload the
+                contents of <code>dist/</code> to your host.
+                </div>
+              </li>
+              <li>
+                <span aria-hidden="true">✓</span> If hosting in a subfolder, update root-relative
+                links before publishing.
+              </li>
+              <li>
+                <span aria-hidden="true">✓</span> Review third-party asset licenses and the policies
+                required for your business.
+              </li>
+            </ul>
+            <div class="closing-card">
+              <div>
+                <p class="eyebrow">NEED A HAND?</p>
+                <h2>Need help customizing your site?</h2>
+                <p>
+                  Contact our team for help tailoring the template to your brand. Tell us what you’d
+                  like to change, and we’ll help you find the right next step.
+                </p>
+              </div>
+              <a
+                href="mailto:support@sramatech.com?subject=Help%20with%20template%20customization"
+                class="secondary-link"
+                >Contact us <span aria-hidden="true">↗</span></a
+              >
+            </div>
+          </section>
+
+          <section class="guide-section" id="troubleshooting">
+            <div class="section-heading">
+              <span class="section-number">07</span>
+              <div>
+                <p class="eyebrow">QUICK ANSWERS</p>
+                <h2>Fix common issues</h2>
+              </div>
+            </div>
+            <div class="troubleshooting-list">
+              <details>
+                <summary>The page will not open or the styles look missing.</summary>
+                <p>
+                  Start the Vite preview with <code>npm run dev</code> and open the address shown in
+                  the terminal. Do not open a source page directly from File Explorer; Vite expands
+                  the shared page parts and compiles the styles.
+                </p>
+              </details>
+              <details>
+                <summary>PowerShell says scripts are disabled.</summary>
+                <p>
+                  Use <code>npm.cmd install</code>, <code>npm.cmd run dev</code>, or
+                  <code>npm.cmd run build</code> in PowerShell.
+                </p>
+              </details>
+              <details>
+                <summary>My logo, image, or font is missing.</summary>
+                <p>
+                  Check the file name and path, including uppercase and lowercase letters. Keep the
+                  file in the intended assets folder and use the same path in your HTML or SCSS.
+                </p>
+              </details>
+              <details>
+                <summary>My live site looks different from the local preview.</summary>
+                <p>
+                  Build again with <code>npm run build</code>, then upload the new contents of
+                  <code>dist/</code>. Also check that your host serves the site from the domain
+                  root, as the template uses root-relative links.
+                </p>
+              </details>
+              <details>
+                <summary>How do I contact support?</summary>
+                <p>
+                  Email <a href="mailto:support@sramatech.com">support@sramatech.com</a> and include
+                  your purchase reference, the page or file involved, your browser, and a short
+                  description of the issue. A screenshot can help us understand what you’re seeing.
+                </p>
+              </details>
+            </div>
+          </section>
+
+          <section class="guide-section" id="support">
+            <div class="section-heading">
+              <span class="section-number">08</span>
+              <div>
+                <p class="eyebrow">WE’RE HERE TO HELP</p>
+                <h2>Contact support</h2>
+              </div>
+            </div>
+            <p class="section-intro">
+              If you need help setting up or customizing the template, email our support team. A few
+              details in your message help us understand the issue and respond more usefully.
+            </p>
+            <div class="support-panel">
+              <div class="support-panel-heading">
+                <span class="support-mail-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="3" y="5" width="18" height="14" rx="2" />
+                    <path d="m4 7 8 6 8-6" />
+                  </svg>
+                </span>
+                <div>
+                  <p class="eyebrow">EMAIL SUPPORT</p>
+                  <a class="support-email" href="mailto:support@sramatech.com"
+                    >support@sramatech.com</a
+                  >
+                </div>
+              </div>
+              <p class="support-panel-copy">To help us get started, include:</p>
+              <ul class="support-request-list">
+                <li>Your purchase or order reference.</li>
+                <li>The page or file you were editing.</li>
+                <li>What you expected to happen and what happened instead.</li>
+                <li>Your browser and device, plus a screenshot if it helps explain the issue.</li>
+              </ul>
+              <a
+                class="support-cta"
+                href="mailto:support@sramatech.com?subject=Elvaron%20template%20support"
+              >
+                Write to support <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+    <footer class="guide-footer">
+      <span>Made to help you make it your own.</span>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+    <script src="CUSTOMER-GUIDE.js" defer></script>
+  </body>
+</html>

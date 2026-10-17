@@ -1,0 +1,36 @@
+// Shared button styles. Section-specific variations stay with their layouts.
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.65;
+  padding: 15px 23px;
+  gap: 18px;
+  white-space: normal;
+  transition: background 0.2s, transform 0.2s;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.btn-primary {
+  --bs-btn-color: #171719;
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: var(--sn-primary);
+  --bs-btn-hover-color: #171719;
+  --bs-btn-hover-bg: transparent;
+  --bs-btn-hover-border-color: var(--sn-primary-hover);
+  --bs-btn-active-color: #171719;
+  --bs-btn-active-bg: transparent;
+  --bs-btn-active-border-color: var(--sn-primary-hover);
+  background-image: var(--sn-primary-gradient);
+}
+
+.btn-outline-dark {
+  --bs-btn-border-color: #deded8;
+  --bs-btn-color: #171719;
+}

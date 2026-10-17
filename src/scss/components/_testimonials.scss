@@ -1,0 +1,47 @@
+.testimonial-note {
+  font-size: 0.7rem;
+  max-width: 240px;
+  margin-top: 24px;
+}
+.testimonial-controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+  > span {
+    font-size: 0.55rem;
+    letter-spacing: 0.1em;
+    margin-right: 12px;
+  }
+  .circle-link {
+    background: transparent;
+    &:hover {
+      background: var(--sn-primary-gradient);
+    }
+  }
+}
+// Reserve room for both quotes so manual slide changes do not shift the page.
+.testimonial-section .carousel-inner {
+  min-height: 255px;
+}
+.no-js .testimonial-controls {
+  display: none;
+}
+.no-js .testimonial-section .carousel-item {
+  display: block;
+  float: none;
+  margin-right: 0;
+  + .carousel-item {
+    margin-top: 35px;
+  }
+}
+@media (max-width: 767.98px) {
+  .testimonial-section .carousel-inner {
+    min-height: 245px;
+  }
+  .testimonial-controls {
+    justify-content: flex-start;
+    padding-left: 35px;
+  }
+}

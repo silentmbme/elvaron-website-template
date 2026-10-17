@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <script>document.documentElement.classList.remove('no-js');</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A thoughtful eye for useful design, everyday comfort, and considered details."
+    />
+    <meta name="theme-color" content="#f7f7f2" />
+    <title>The Elvaron team â€” Elvaron</title>
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    
+    <link rel="preload" href="../node_modules/@fontsource-variable/bricolage-grotesque/files/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../node_modules/@fontsource-variable/hanken-grotesk/files/hanken-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/assets/loader.css" data-loader-styles />
+<link rel="preload" href="../node_modules/remixicon/fonts/remixicon.woff2" as="font" type="font/woff2" crossorigin />
+    <style data-offcanvas-startup>
+      #mainNav[hidden], #site-customizer[hidden] { display: none !important; }
+      html.no-js #mainNav[hidden] { display: flex !important; }
+      html:not(.no-js) #mainNav:not(.show):not(.showing):not(.hiding) {
+        visibility: hidden !important;
+        transform: translateX(100%) !important;
+        transition: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <include src="html/partials/components/loader.html"></include>
+    <include src="html/partials/headers/default.html"></include>
+    <include src="html/partials/customizer/customizer.html"></include>
+    <main id="main">
+      <section class="page-hero">
+        <div class="container">
+          <nav aria-label="Breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">The Elvaron team</li>
+            </ol>
+          </nav>
+          <p class="eyebrow"><span class="status-dot"></span>THE ELVARON EDIT DIRECTOR</p>
+          <h1>The Elvaron team</h1>
+          <p>A thoughtful eye for useful design, everyday comfort, and considered details.</p>
+        </div>
+      </section>
+      <section class="section-space">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-5">
+              <img
+                src="/src/assets/images/strategy.webp"
+                alt="Illustrative strategy studio scene"
+                loading="lazy"
+                width="1200"
+                height="800"
+              />
+            </div>
+            <div class="col-lg-7 prose">
+              <h2>A little perspective.<br />A <mark>clearer path.</mark></h2>
+              <p>
+                Taylor is an illustrative profile for the Elvaron template, representing a strategy
+                partner who connects audience insight with creative direction.
+              </p>
+              <h3>What inspires us</h3>
+              <ul class="check-list">
+                <li>Brand positioning</li>
+                <li>Audience research</li>
+                <li>Home collection strategy</li>
+                <li>Creative briefing</li>
+              </ul>
+              <h3>Chosen with care</h3>
+              <p>
+                The best work starts with useful questions, honest conversations, and a clear
+                understanding of what success looks like.
+              </p>
+              <a class="btn btn-primary" href="/contact.html">Meet your project team</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <include src="html/partials/components/marketing-cta.html"></include>
+    </main>
+    <include src="html/partials/footers/default.html"></include>
+        <script data-loader-dismiss>
+      (() => {
+        const loader = document.getElementById('page-loader');
+        if (!loader) return;
+        const ready = window.elvaronStylesReady || new Promise(resolve => {
+          if (document.readyState === 'complete') resolve();
+          else window.addEventListener('load', resolve, { once: true });
+        });
+        ready.then(() => document.fonts ? document.fonts.ready : undefined).then(() => {
+          requestAnimationFrame(() => requestAnimationFrame(() => {
+            loader.classList.add('is-hidden');
+            setTimeout(() => loader.remove(), 180);
+          }));
+        });
+      })();
+    </script>
+
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>

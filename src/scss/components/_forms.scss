@@ -1,0 +1,58 @@
+// Shared controls work inside both light and .theme-dark surfaces.
+.form-label {
+  color: var(--sn-ink);
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: var(--sn-space-1);
+}
+.form-control,
+.form-select {
+  background-color: var(--sn-surface);
+  border-color: var(--sn-line);
+  color: var(--sn-ink);
+  padding: 0.75rem 1rem;
+  transition:
+    border-color var(--sn-duration),
+    box-shadow var(--sn-duration);
+  &:focus {
+    background-color: var(--sn-surface);
+    color: var(--sn-ink);
+  }
+}
+.form-control::placeholder {
+  color: var(--sn-muted);
+  opacity: 1;
+}
+.form-text {
+  color: var(--sn-muted);
+}
+.form-control:focus-visible,
+.form-select:focus-visible {
+  outline: 3px solid var(--sn-secondary);
+  outline-offset: 5px;
+}
+.form-control:disabled,
+.form-select:disabled {
+  background-color: var(--sn-paper);
+  color: var(--sn-muted);
+}
+.theme-dark:not(body) {
+  --sn-paper: #0b1020;
+  --bs-body-color: #f8fafc;
+  --bs-body-bg: #141b30;
+  --bs-secondary-color: #b1b9cf;
+  --bs-border-color: #343b51;
+  .form-select {
+    --bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23f8fafc' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  }
+  .btn-outline-dark {
+    --bs-btn-color: #f8fafc;
+    --bs-btn-border-color: #8a94ac;
+    --bs-btn-hover-bg: #f8fafc;
+    --bs-btn-hover-color: #0b1020;
+    --bs-btn-hover-border-color: #f8fafc;
+    --bs-btn-active-bg: #f8fafc;
+    --bs-btn-active-color: #0b1020;
+    --bs-btn-active-border-color: #f8fafc;
+  }
+}

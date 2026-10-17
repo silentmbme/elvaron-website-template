@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+  <title>Elvaron</title>
+  <rect width="40" height="40" rx="8" fill="#36ff5e" />
+  <g transform="translate(4.5 5.4) scale(.25)" fill="#000">
+    <path d="M0 0h72v19L0 39z" />
+    <path d="M0 40h72v19L0 79z" />
+    <path d="M0 80h124v37H0z" />
+  </g>
+</svg>

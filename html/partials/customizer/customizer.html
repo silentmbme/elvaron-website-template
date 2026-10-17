@@ -1,0 +1,76 @@
+<button
+  class="customizer-tab"
+  type="button"
+  data-customizer-open
+  aria-label="Open appearance settings"
+  aria-controls="site-customizer"
+  aria-expanded="false"
+>
+  <i class="ri-palette-line" aria-hidden="true"></i>
+</button>
+<div class="customizer-backdrop" data-customizer-backdrop hidden></div>
+<aside
+  class="site-customizer"
+  id="site-customizer" hidden
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="customizer-title"
+  aria-hidden="true"
+  inert
+>
+  <div class="customizer-header">
+    <div>
+      <p class="eyebrow">MAKE IT YOURS</p>
+      <h2 id="customizer-title">Appearance</h2>
+    </div>
+    <button class="customizer-close" type="button" data-customizer-close aria-label="Close appearance settings">
+      <i class="ri-close-line" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <section class="customizer-group" aria-labelledby="customizer-theme-label">
+    <h3 id="customizer-theme-label">Color mode</h3>
+    <div class="customizer-segmented" role="group" aria-label="Color mode">
+      <button type="button" data-set-theme="light" aria-pressed="true"><i class="ri-sun-line" aria-hidden="true"></i> Light</button>
+      <button type="button" data-set-theme="dark" aria-pressed="false"><i class="ri-moon-line" aria-hidden="true"></i> Dark</button>
+    </div>
+  </section>
+
+  <section class="customizer-group" aria-labelledby="customizer-direction-label">
+    <h3 id="customizer-direction-label">Layout direction</h3>
+    <div class="customizer-segmented" role="group" aria-label="Layout direction">
+      <button type="button" data-set-direction="ltr" aria-pressed="true">LTR</button>
+      <button type="button" data-set-direction="rtl" aria-pressed="false">RTL</button>
+    </div>
+  </section>
+
+  <section class="customizer-group" aria-labelledby="customizer-color-label">
+    <h3 id="customizer-color-label">Solid color theme</h3>
+    <div class="customizer-swatches" role="group" aria-label="Choose primary solid color">
+      <button type="button" data-solid-theme="lime" style="--swatch: #35fe5d" aria-label="Lime solid color" aria-pressed="true"></button>
+      <button type="button" data-solid-theme="blue" style="--swatch: #8ac7ee" aria-label="Blue solid color" aria-pressed="false"></button>
+      <button type="button" data-solid-theme="violet" style="--swatch: #c6f24e" aria-label="Lime chartreuse solid color" aria-pressed="false"></button>
+      <button type="button" data-solid-theme="coral" style="--swatch: #ffb38a" aria-label="Coral solid color" aria-pressed="false"></button>
+      <button type="button" data-solid-theme="rose" style="--swatch: #f09ac2" aria-label="Rose solid color" aria-pressed="false"></button>
+      <button type="button" data-solid-theme="amber" style="--swatch: #f4ce70" aria-label="Amber solid color" aria-pressed="false"></button>
+    </div>
+  </section>
+
+  <section class="customizer-group" aria-labelledby="customizer-gradient-label">
+    <h3 id="customizer-gradient-label">Gradient theme</h3>
+    <div class="customizer-swatches" role="group" aria-label="Choose primary gradient theme">
+      <button type="button" data-gradient-theme="lime" style="--swatch: linear-gradient(135deg, #a3f36b, #69d7c8)" aria-label="Light green teal gradient" aria-pressed="false"></button>
+      <button type="button" data-gradient-theme="mint" style="--swatch: linear-gradient(135deg, #c4a7ff, #89a9ff)" aria-label="Light violet blue gradient" aria-pressed="false"></button>
+      <button type="button" data-gradient-theme="ocean" style="--swatch: linear-gradient(135deg, #ffd166, #ff9c7a)" aria-label="Light gold coral gradient" aria-pressed="false"></button>
+      <button type="button" data-gradient-theme="indigo" style="--swatch: linear-gradient(135deg, #83e8eb, #84b8ff)" aria-label="Light cyan blue gradient" aria-pressed="false"></button>
+      <button type="button" data-gradient-theme="sunset" style="--swatch: linear-gradient(135deg, #ff9cce, #c3a0ff)" aria-label="Light pink purple gradient" aria-pressed="false"></button>
+      <button type="button" data-gradient-theme="rose" style="--swatch: linear-gradient(135deg, #ffe680, #ffb86b)" aria-label="Light yellow amber gradient" aria-pressed="false"></button>
+    </div>
+  </section>
+
+  <div class="customizer-footer">
+    <button class="customizer-reset btn w-100 btn-light border" type="button" data-customizer-reset>
+      <i class="ri-refresh-line" aria-hidden="true"></i> Reset to defaults
+    </button>
+  </div>
+</aside>

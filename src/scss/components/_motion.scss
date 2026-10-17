@@ -1,0 +1,129 @@
+:root {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+}
+.scroll-progress {
+  position: fixed;
+  inset: 0 0 auto;
+  height: 3px;
+  background: var(--sn-primary-gradient);
+  transform: scaleX(0);
+  transform-origin: left;
+  z-index: 1100;
+  pointer-events: none;
+}
+.about-photo {
+  overflow: hidden;
+  border-radius: 14px;
+}
+.navbar-toggler i {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+.btn-close {
+  background-image: none;
+  display: grid;
+  place-items: center;
+  i {
+    font-size: 1.4rem;
+    line-height: 1;
+  }
+}
+.accordion-button::after {
+  background-image: none;
+  content: '\ea4e';
+  font-family: remixicon;
+  font-size: 1.2rem;
+  display: grid;
+  place-items: center;
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: none;
+}
+.back-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid #171719;
+  background: var(--sn-primary-gradient);
+  color: #171719 !important;
+  box-shadow: 0 8px 24px #17171918;
+  z-index: 1020;
+  text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition:
+    opacity 0.25s,
+    transform 0.25s,
+    visibility 0.25s;
+  &.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+  &:hover {
+    background: #171719;
+    color: var(--sn-primary) !important;
+  }
+}
+.btn i,
+.text-link i,
+.project-card h3 i,
+.team-card h3 i {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .btn:hover i,
+  .text-link:hover i,
+  .project-card h3 a:hover i,
+  .team-card h3 a:hover i {
+    transform: translate(3px, -3px);
+  }
+  .service-card {
+    transition:
+      box-shadow 0.35s,
+      background 0.35s,
+      transform 0.35s;
+    &:hover {
+      transform: translateY(-6px);
+    }
+  }
+  .service-card .card-top i {
+    transition:
+      background 0.3s,
+      transform 0.3s;
+  }
+  .service-card:hover .card-top i {
+    background: var(--sn-primary-gradient);
+    transform: rotate(-7deg);
+  }
+  .blog-card > a {
+    display: block;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+  .blog-card img {
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .blog-card > a:hover img {
+    transform: scale(1.035);
+  }
+}
+// ScrollTrigger restores an inline scrollBehavior during refresh; preference wins.
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    scroll-behavior: auto !important;
+  }
+  .back-to-top,
+  .btn i,
+  .text-link i {
+    transition: none;
+  }
+}
