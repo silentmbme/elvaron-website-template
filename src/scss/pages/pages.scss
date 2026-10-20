@@ -11,9 +11,33 @@ img {
 }
 
 mark {
-  background: linear-gradient(transparent 52%, var(--sn-primary) 52%);
+    background: none;
+  position: relative;
   color: inherit;
-  padding: 0 0.02em;
+  padding: 0 0.02em 5px;
+  text-decoration: none;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  position: relative;
+  z-index: 1;
+}
+
+mark::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 36px;
+  z-index: -1;
+  background-color: var(--sn-primary, #35fe5d);
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20' preserveAspectRatio='none'%3E%3Cpath d='M0 7 Q25 0 50 7 T100 7 M0 15 Q25 8 50 15 T100 15' fill='none' stroke='black' stroke-width='2'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20' preserveAspectRatio='none'%3E%3Cpath d='M0 7 Q25 0 50 7 T100 7 M0 15 Q25 8 50 15 T100 15' fill='none' stroke='black' stroke-width='2'/%3E%3C/svg%3E");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  pointer-events: none;
 }
 
 .eyebrow {
@@ -3070,7 +3094,7 @@ mark {
 }
 
 .article-callout {
-  background: #d6ffe0;
+  background: var(--sn-primary-01);
   padding: 28px;
   border-radius: 12px;
   margin: 28px 0;
@@ -6459,13 +6483,30 @@ body > .site-header,
   }
 
   h1 mark {
-    display: inline-block;
-    padding: 0.02em 0.18em 0.1em;
-    border-radius: 0.18em;
-    background: linear-gradient(transparent 52%, var(--sn-primary) 52%);
-    color: var(--sn-ink);
-    line-height: 0.98;
-    border-radius: 0px !important;
+   background: none;
+  position: relative;
+  color: inherit;
+  padding: 0 0.02em 5px;
+  text-decoration: none;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  &::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 36px;
+  z-index: -1;
+  background-color: var(--sn-primary, #35fe5d);
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20' preserveAspectRatio='none'%3E%3Cpath d='M0 7 Q25 0 50 7 T100 7 M0 15 Q25 8 50 15 T100 15' fill='none' stroke='black' stroke-width='2'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20' preserveAspectRatio='none'%3E%3Cpath d='M0 7 Q25 0 50 7 T100 7 M0 15 Q25 8 50 15 T100 15' fill='none' stroke='black' stroke-width='2'/%3E%3C/svg%3E");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  pointer-events: none;
+}
   }
 
   .hero-description {
@@ -15116,14 +15157,31 @@ main > #testimonials.testimonial-story-section .section-heading h2 {
   }
 
   .growth-alt-trust-copy h2 mark {
-    padding: 0 0.07em;
-    border-radius: 0.13em;
-    background: linear-gradient(
-      transparent 58%,
-      var(--sn-primary) 58% 92%,
-      transparent 92%
-    );
-    color: inherit;
+     background: none;
+  position: relative;
+  color: inherit;
+  padding: 0 0.02em 5px;
+  text-decoration: none;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+
+  &::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 36px;
+  z-index: -1;
+  background-color: var(--sn-primary, #35fe5d);
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20' preserveAspectRatio='none'%3E%3Cpath d='M0 7 Q25 0 50 7 T100 7 M0 15 Q25 8 50 15 T100 15' fill='none' stroke='black' stroke-width='2'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20' preserveAspectRatio='none'%3E%3Cpath d='M0 7 Q25 0 50 7 T100 7 M0 15 Q25 8 50 15 T100 15' fill='none' stroke='black' stroke-width='2'/%3E%3C/svg%3E");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  pointer-events: none;
+}
   }
 
   .growth-alt-trust-intro {
@@ -16045,6 +16103,14 @@ main > #testimonials.testimonial-story-section .section-heading h2 {
       background: var(--sn-primary);
       border-color: var(--sn-primary);
       color: #171719;
+    }
+  }
+}
+
+.hero-enter{
+  mark{
+    &::after{
+      display: none;
     }
   }
 }

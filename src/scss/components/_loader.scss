@@ -25,7 +25,7 @@
   padding: 0.4rem;
   border-radius: 6px;
   background: var(--sn-primary-gradient);
-  background-color: var(--sn-primary, #35fe5d);
+  background-color: var(--sn-primary, var(--sn-primary));
   color: #000;
   animation: loader-mark-breathe 2.2s cubic-bezier(0.45, 0, 0.55, 1) 650ms infinite alternate;
 }
