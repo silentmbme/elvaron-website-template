@@ -1480,8 +1480,9 @@ mark::after {
     margin-bottom: 34px;
 
     i {
-      background: #f7f7f2;
-      color: #333;
+      background: var(--service-icon-background, #f7f7f2);
+      color: var(--service-icon-color, #333);
+      transition: background-color 250ms ease, color 250ms ease, border-color 250ms ease;
       font-size: 1.45rem;
       border-radius: 7px;
       width: 52px;
@@ -4299,7 +4300,7 @@ body > .site-header,
     border: 1px solid rgba(23, 54, 28, 0.09);
     border-radius: 24px;
     background: rgba(255, 255, 255, 0.94);
-    box-shadow: 0 16px 44px rgba(28, 57, 32, 0.065);
+    box-shadow: none;
     transition:
       transform 320ms cubic-bezier(0.2, 0.75, 0.25, 1),
       border-color 260ms ease,
@@ -4438,7 +4439,7 @@ body > .site-header,
   .testimonial-section .quote-card:hover {
     transform: translateY(-7px);
     border-color: var(--sn-primary-01);
-    box-shadow: 0 26px 58px rgba(28, 57, 32, 0.13);
+    box-shadow: none;
   }
 }
 
@@ -5768,9 +5769,9 @@ body > .site-header,
       color: #172018;
       font-size: 1.35rem;
       transition:
-        transform 260ms cubic-bezier(0.2, 0.75, 0.25, 1),
         background-color 260ms ease,
-        box-shadow 260ms ease;
+        color 260ms ease,
+        border-color 260ms ease;
     }
 
     h3 {
@@ -5848,16 +5849,25 @@ body > .site-header,
   }
 }
 
+.everyday-section .benefit-row:focus-within > i {
+  background-color: var(--sn-primary);
+  color: #111411;
+  border-color: var(--sn-primary);
+}
+
+@media (hover: hover) {
+  .everyday-section .benefit-row:hover > i {
+    background-color: var(--sn-primary);
+    color: #111411;
+    border-color: var(--sn-primary);
+  }
+}
+
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
   .everyday-section .benefit-row:hover {
     transform: translateX(5px);
     border-color: rgba(24, 140, 50, 0.32);
 
-    > i {
-      transform: rotate(-8deg) scale(1.06);
-      background-color: var(--sn-primary);
-      box-shadow: 0 8px 22px rgba(24, 140, 50, 0.12);
-    }
   }
 
   .everyday-section .everyday-photo:hover {
@@ -6152,6 +6162,8 @@ body > .site-header,
 
 .partner-logos {
   display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
   gap: 18px;
   width: max-content;
   padding: 6px 2px 18px;
@@ -6159,13 +6171,14 @@ body > .site-header,
 
 .partner-logo-slide {
   display: grid;
-  flex: 0 0 clamp(170px, 19vw, 220px);
+  flex: 0 0 auto;
+  width: clamp(170px, 19vw, 220px);
   height: 104px;
   place-items: center;
   border: 1px solid rgba(27, 50, 31, 0.09);
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.86);
-  box-shadow: 0 12px 30px rgba(26, 55, 31, 0.055);
+  box-shadow: none;
   scroll-snap-align: start;
   transition:
     transform 200ms ease,
@@ -6175,7 +6188,7 @@ body > .site-header,
   &:hover {
     transform: translateY(-4px);
     border-color: color-mix(in srgb, var(--sn-primary) 68%, transparent);
-    box-shadow: 0 18px 38px rgba(26, 55, 31, 0.1);
+    box-shadow: none;
   }
 
   img {
@@ -6203,7 +6216,7 @@ body > .site-header,
 
 @media (max-width: 575.98px) {
   .partner-logo-slide {
-    flex-basis: min(70vw, 220px);
+    width: min(70vw, 220px);
   }
 
   .partner-strip-heading {
@@ -7219,8 +7232,8 @@ body > .site-header,
         height: 48px;
         border: 1px solid rgba(26, 45, 29, 0.13);
         border-radius: 50%;
-        background: transparent;
-        color: var(--sn-secondary);
+        background: var(--service-icon-background, transparent);
+        color: var(--service-icon-color, var(--sn-secondary));
       }
 
       span {
@@ -7568,7 +7581,7 @@ body > .site-header,
 
     &:hover {
       transform: translateY(-5px);
-      box-shadow: 0 18px 36px rgba(15, 29, 17, 0.08);
+      box-shadow: none;
     }
 
     blockquote {

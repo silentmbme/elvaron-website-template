@@ -1,0 +1,17 @@
+// Keep every carousel and its controls shadow-free in all themes and states.
+:is(
+  .carousel,
+  .partner-carousel,
+  .growth-work-carousel,
+  .carousel-buttons,
+  .testimonial-controls
+) {
+  &,
+  &::before,
+  &::after,
+  *,
+  *::before,
+  *::after {
+    box-shadow: none !important;
+  }
+}

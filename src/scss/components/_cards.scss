@@ -52,7 +52,7 @@
   }
 }
 [data-theme="dark"]{
-  .service-card:not(:hover) .card-top i {
+  .service-card:not(:hover):not(:focus-within) .card-top i {
     background: var(--sn-paper);
     color: #fff;
   }

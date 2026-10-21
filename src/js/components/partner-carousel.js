@@ -33,7 +33,7 @@ export function initPartnerCarousel() {
       const gap = Number.parseFloat(getComputedStyle(track).columnGap) || 0;
       const step = slide.getBoundingClientRect().width + gap;
       const maxScroll = viewport.scrollWidth - viewport.clientWidth;
-      if (maxScroll - viewport.scrollLeft <= step + 2) {
+      if (maxScroll - viewport.scrollLeft <= 2) {
         viewport.scrollTo({ left: 0, behavior: 'smooth' });
       } else {
         viewport.scrollBy({ left: step, behavior: 'smooth' });
